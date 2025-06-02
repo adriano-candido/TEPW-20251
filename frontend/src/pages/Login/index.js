@@ -8,10 +8,16 @@ export default function Login() {
   return (
     <div className="login-container">
       <section className="form">
-          <img 
+          <img src={logoImage} alt="logo unichristus"/>
+          <form>
+              <h1>Acesse sua Conta</h1>
+              <input placeholder="Usuário" />
+              <input type="password" placeholder="Senha" />
 
-
+              <button className="button">Entrar</button>
+          </form>
       </section>
+        <img src={padLock} alt="imagem de cadeado do login"/>
     </div>
   );
 }
