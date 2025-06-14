@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     @Autowired
@@ -35,7 +36,7 @@ public class UserController {
     @Operation(summary = "Retorna o usuário do ID digitado | role: [ADMIN]"
             ,tags = "User")
     @GetMapping("/all")
-    public List<UserLowDTO> findAll(){
+    public List<UserDTO> findAll(){
         return service.findAll();
     }
 

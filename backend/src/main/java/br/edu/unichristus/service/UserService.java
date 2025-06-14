@@ -25,9 +25,9 @@ public class UserService {
         return MapperUtil.parseObject(savedUser, UserLowDTO.class);
     }
 
-    public List<UserLowDTO> findAll(){
+    public List<UserDTO> findAll(){
         var listUsers = repository.findAll();
-        return MapperUtil.parseListObjects(listUsers, UserLowDTO.class);
+        return MapperUtil.parseListObjects(listUsers, UserDTO.class);
     }
 
     public User findById(Long id){
